@@ -13,7 +13,7 @@ const Chat = () => {
         setMessage('');
 
         try {
-            const response = await axios.post('http://localhost:8000/api/v1/chat', { message: userMessage });
+            const response = await axios.post('https://nfaihw.onrender.com/api/v1/chat', { message: userMessage });
             const botResponse = response.data.response;
             setChatHistory([...chatHistory, { userMessage, botResponse }]);
         } catch (error) {
